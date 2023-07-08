@@ -1,5 +1,5 @@
 FROM httpd
 RUN apt-get update
-COPY index.html /usr/loacl/apache2/htdocs/
+COPY index.html /usr/local/apache2/htdocs/
 EXPOSE 80      #because httpd runs default port number 80     
 CMD["httpd-foreground"]    #if u want u can specify this instruction,even otherwise the app runs
