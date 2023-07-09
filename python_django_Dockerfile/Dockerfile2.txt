@@ -1,0 +1,9 @@
+FROM python:3
+MAINTER madan@gmail.com
+WORKDIR /app
+COPY requirement.txt .
+RUN apt-get update && pip install -r requirement.txt
+COPY . .
+EXPOSE 8001
+ENTRYPOINT ["python"]
+CMD ["main.py"]
